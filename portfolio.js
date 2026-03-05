@@ -1,4 +1,3 @@
-/* ===== Typed.js ===== */
 var typed = new Typed(".text", {
     strings: ["Web Developer", "Mobile App Developer", "WordPress Developer", "Freelancer"],
     typeSpeed: 100,
@@ -7,7 +6,6 @@ var typed = new Typed(".text", {
     loop: true
 });
 
-/* ===== Mobile Menu Toggle ===== */
 const menuIcon = document.getElementById('menu-icon');
 const navbar = document.querySelector('.navbar');
 
@@ -16,7 +14,6 @@ menuIcon.addEventListener('click', () => {
     menuIcon.classList.toggle('bx-x');
 });
 
-/* ===== Close menu on link click ===== */
 document.querySelectorAll('.navbar a').forEach(link => {
     link.addEventListener('click', () => {
         navbar.classList.remove('active');
@@ -24,16 +21,13 @@ document.querySelectorAll('.navbar a').forEach(link => {
     });
 });
 
-/* ===== Sticky Header + Active Nav on Scroll ===== */
 const header = document.querySelector('.header');
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.navbar a');
 
 window.addEventListener('scroll', () => {
-    // Sticky header
     header.classList.toggle('sticky', window.scrollY > 50);
 
-    // Active nav link based on scroll position
     let current = '';
     sections.forEach(section => {
         const sectionTop = section.offsetTop - 150;
@@ -48,14 +42,12 @@ window.addEventListener('scroll', () => {
         }
     });
 
-    // Scroll-to-top button
     const scrollTop = document.querySelector('.scroll-top');
     if (scrollTop) {
         scrollTop.classList.toggle('visible', window.scrollY > 400);
     }
 });
 
-/* ===== Skill Bar Animation on Scroll ===== */
 const skillSection = document.querySelector('.skills');
 const skillBars = document.querySelectorAll('.skill-progress');
 let skillsAnimated = false;
@@ -75,7 +67,6 @@ function animateSkills() {
 window.addEventListener('scroll', animateSkills);
 window.addEventListener('load', animateSkills);
 
-/* ===== Scroll Reveal (fade-in elements) ===== */
 function revealOnScroll() {
     const elements = document.querySelectorAll('.project-card, .resume-item, .about-container, .contact-form');
     elements.forEach(el => {
@@ -93,7 +84,6 @@ function revealOnScroll() {
 window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);
 
-/* ===== Contact Form Handler ===== */
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
